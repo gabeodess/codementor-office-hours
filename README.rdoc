@@ -1,28 +1,55 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo of the steps I like to take when starting a new Rails application.
 
-Things you may want to cover:
+Setting up RVM:
 
-* Ruby version
+* rails new codementor
 
-* System dependencies
+* echo codementor > codementor/.ruby-gemset
 
-* Configuration
+* echo 2.2.0 > codementor/.ruby-version
 
-* Database creation
+* cd codementor
 
-* Database initialization
+* bundle install
 
-* How to run the test suite
+== Twitter Bootstrap
 
-* Services (job queues, cache servers, search engines, etc.)
+Links:
+* http://getbootstrap.com/
+* http://getbootstrap.com/examples/sticky-footer-navbar/
+* http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css
 
-* Deployment instructions
+* mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+* touch app/assets/stylesheets/layout.css
 
-* ...
+application.scss
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "layout";
 
+application.js
+//= require jquery
+//= require bootstrap-sprockets
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Devise
+* https://github.com/plataformatec/devise
+
+* gem 'devise'
+
+* rails generate devise:install
+
+* rails generate devise User
+
+* rails generate devise:views users
+
+Enable scoped views in initializers/devise.rb
+* config.scoped_views = true
+
+== Active Admin
+
+gem 'activeadmin', github: 'activeadmin'
+
+* rails g active_admin:install
+* rails generate active_admin:resource User
