@@ -25,13 +25,13 @@ Links:
 * touch app/assets/stylesheets/layout.css
 
 application.scss
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "layout";
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+  @import "layout";
 
 application.js
-//= require jquery
-//= require bootstrap-sprockets
+  //= require jquery
+  //= require bootstrap-sprockets
 
 == Devise
 * https://github.com/plataformatec/devise
@@ -49,7 +49,7 @@ Enable scoped views in initializers/devise.rb
 
 == Active Admin
 
-gem 'activeadmin', github: 'activeadmin'
+* gem 'activeadmin', github: 'activeadmin'
 
 * rails g active_admin:install
 * rails generate active_admin:resource User
